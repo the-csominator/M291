@@ -1,14 +1,12 @@
 #score { text-align: center; }
-
 #game {
   width: 600px;
   height: 300px;
   border: 2px solid black;
   margin: auto;
-  background-image: url("https://raw.githubusercontent.com/kriscfoster/chrome-dino-game/master/background.jpg");
+  background-image: url("https://thumbs.dreamstime.com/b/pixel-art-forest-landscape-sunset-orange-sky-retro-bit-game-background-trees-grassy-platform-scenic-horizon-404570071.jpg");
   background-size: cover;
 }
-
 #guy {
   height: 75px;
   width: 75px;
@@ -17,7 +15,6 @@
   background-image: url("https://static.vecteezy.com/system/resources/thumbnails/028/652/011/small/pixel-art-student-character-png.png");
   background-size: cover;
 }
-
 #rock {
   width: 50px;
   height: 50px;
@@ -28,19 +25,43 @@
   background-size: cover;
   animation: rock 1.33s infinite;
 }
-
 @keyframes rock {
   0%{left: 550px;}
   100%{left: -50px;}
 }
-
 .jump-animation {
   animation: jump 0.5s;
 }
-
 @keyframes jump {
   0%{top: 225px;}
   50%{top: 75px;}
   75%{top: 75px;}
   100%{top: 225px;}
+}
+
+/* Start Button */
+#startBtn {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 30px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Kollisions-Animation */
+.collision-animation {
+  animation: collision 0.5s;
+}
+
+@keyframes collision {
+  0%  { transform: rotate(0deg) translateX(0); }
+  25% { transform: rotate(20deg) translateX(10px); }
+  50% { transform: rotate(-20deg) translateX(-10px); }
+  75% { transform: rotate(10deg) translateX(5px); }
+  100%{ transform: rotate(0deg) translateX(0); }
+}
+
+/* Rock-Animation standardmässig pausiert */
+#rock {
+  animation-play-state: paused;
 }
